@@ -9,3 +9,8 @@ class User(AbstractUser):
         crop=['middle', 'center'],
         upload_to='profile',
     )
+    # post_set = 
+    # like_posts =
+
+    followings = models.ManyToManyField('self', related_name='followers', symmetrical=False)
+

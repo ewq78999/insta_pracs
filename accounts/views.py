@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from .forms import CustomUserCreationForm, CustomAuthenticationForm
 from django.contrib.auth import login as auth_login
 from django.contrib.auth import get_user_model
+from django.contrib.auth.decorators import login_required
 
 
 # Create your views here.
@@ -49,3 +50,5 @@ def profile(request, username):
     }
 
     return render(request, 'account/profile.html', context)
+
+
